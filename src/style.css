@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+.icon {
+    width: 1.1em;
+    height:1.1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+
+    overflow: hidden;
+}
+
+#canvas {
+    cursor: crosshair;
+    display: block;
+}
+
+.mainMenu, .fontList {
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    position: fixed;
+    user-select: none;
+}
+
+.mainMenu {
+
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    background-color: transparent;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+
+    /*justify-content: space-between;*/
+
+}
+
+
+.mainMenu > button {
+    border: 1px solid silver;
+    color: #444448;
+    font-size: medium;
+    cursor: pointer;
+    padding: 10px;
+    margin: 3px 3px;
+    background-color: #fdfdfd;
+    border-radius: 50%;
+
+}
+
+@media (min-width: 500px) {
+    /* pc端 */
+    .fontList {
+        top: 100px;
+        left: 20px;
+        width: 100px;
+        z-index: 2;
+        flex-direction: row;
+        background-color: transparent;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+    /* 移动端 */
+    .fontList {
+        bottom: 15px;
+        left:50%;
+        transform:translate(-50%);
+        width: 200px;
+        z-index: 2;
+        flex-direction: row;
+        background-color: transparent;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+}
+
+.colorList {
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.fontList button {
+    width: 25px;
+    height: 25px;
+    margin: 3px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px whitesmoke solid;
+    box-shadow: 1px 1px 2px 1px silver;
+}
+
+.colorList .active {
+    box-shadow: 0 0 15px #00CCFF;
+
+}
+
+.colorList > button:hover {
+    box-shadow: 0 0 15px #00CCFF;
+}
+
+.fontList > label > input {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.weight {
+    background-size: 98% 3px;
+    margin: auto;
+    width: 80%;
+    background: linear-gradient(to right, #dddddd 0%, #888888 100%);
+    outline: none;
+    -webkit-appearance: none; /*清除系统默认样式*/
+    height: 4px; /*横条的高度*/
+}
+input[type="range"]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    -webkit-appearance: none;
+    border: 0;
+}

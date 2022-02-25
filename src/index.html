@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "zh-CN">
+<head>
+  <meta charset = "UTF-8"/>
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge"/>
+  <meta
+      name = "viewport"
+      content = "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <title>画板</title>
+  <link rel = "stylesheet" href = "style.css"/>
+</head>
+
+<body>
+  <div id="mainMenu" class="mainMenu">
+    <button id="eraser"><svg class="icon">
+      <use xlink:href="#icon-rubber"></use>
+    </svg></button>
+    <button id="undo"><svg class="icon">
+      <use xlink:href="#icon-undo"></use>
+    </svg></button>
+    <button id="clear"><svg class="icon">
+      <use xlink:href="#icon-clear"></use>
+    </svg></button>
+    <button id="save"><svg class="icon">
+      <use xlink:href="#icon-save"></use>
+    </svg></button>
+  </div>
+  <div id = "fontList" class="fontList">
+    <span class="title"></span>
+    <div id = "colorList" class = "colorList">
+      <button id = "redBtn" class = "color"></button>
+      <button id = "orangeBtn" class = "color"></button>
+      <button id = "goldBtn" class = "color"></button>
+      <button id = "greenBtn" class = "color"></button>
+      <button id = "cyanBtn" class = "color"></button>
+      <button id = "skyblueBtn" class = "color"></button>
+      <button id = "deepskyblueBtn" class = "color"></button>
+      <button id = "mediumpurpleBtn" class = "color"></button>
+      <button id = "thistleBtn" class = "color"></button>
+      <button id = "blackBtn" class = "color active"></button>
+      <button id = "silverBtn" class = "color"></button>
+      <button id = "siennaBtn" class = "color"></button>
+    </div>
+    <span class="title"></span>
+    <label>
+      <input type = "range" id="range"  class="weight" min="2" max="20" value="5">
+    </label>
+  </div>
+  <canvas id = "canvas" width = "100" height = "100"></canvas>
+  <script src = "//at.alicdn.com/t/font_3205558_w0qjkx6wqf.js"></script>
+  
+  <script src = "main.js"></script>
+  
+</body>
+</html>
